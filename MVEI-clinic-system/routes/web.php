@@ -17,6 +17,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/users/create', [App\Http\Controllers\Admin\AdminController::class, 'create'])->name('admin.users.create');
     Route::post('/admin/users', [App\Http\Controllers\Admin\AdminController::class, 'store'])->name('admin.users.store');
     Route::get('/admin/patients', [App\Http\Controllers\Admin\AdminController::class, 'patients'])->name('admin.patients');
+    Route::get('/admin/doctors', [App\Http\Controllers\Admin\AdminController::class, 'doctors'])->name('admin.doctors');
+    Route::get('/admin/appointments', [App\Http\Controllers\Admin\AdminController::class, 'appointments'])->name('admin.appointments');
+    Route::get('/admin/billing', [App\Http\Controllers\Admin\AdminController::class, 'billing'])->name('admin.billing');
+    Route::get('/admin/settings', [App\Http\Controllers\Admin\AdminController::class, 'settings'])->name('admin.settings');
 });
 
 Route::middleware(['auth', 'doctor'])->group(function () {

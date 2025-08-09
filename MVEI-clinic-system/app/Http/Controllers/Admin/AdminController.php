@@ -42,4 +42,24 @@ class AdminController extends Controller
     {
         return view('admin.patients');
     }
+
+    public function doctors()
+    {
+        return view('admin.doctors');
+    }
+
+    public function appointments()
+    {
+        return view('admin.appointments');
+    }
+
+    public function billing()
+    {
+        return view('admin.billing');
+    }
+
+    public function settings()
+    {
+        return view('admin.settings');
+    }
 }
