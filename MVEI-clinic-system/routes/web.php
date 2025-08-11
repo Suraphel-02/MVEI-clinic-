@@ -30,6 +30,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 Route::middleware(['auth', 'doctor'])->group(function () {
     Route::get('/doctor/dashboard', [App\Http\Controllers\Doctor\DoctorController::class, 'dashboard'])->name('doctor.dashboard');
+    Route::get('/doctor/appointments', [App\Http\Controllers\Doctor\DoctorController::class, 'appointments'])->name('doctor.appointments');
+    Route::get('/doctor/patients', [App\Http\Controllers\Doctor\DoctorController::class, 'patients'])->name('doctor.patients');
+    Route::get('/doctor/profile', [App\Http\Controllers\Doctor\DoctorController::class, 'profile'])->name('doctor.profile');
 });
 
 Route::middleware(['auth', 'nurse'])->group(function () {

@@ -16,4 +16,19 @@ class DoctorController extends Controller
     {
         // Doctor patient records logic
     }
+
+    public function appointments()
+    {
+        return view('doctor.appointments');
+    }
+
+    public function patients()
+    {
+        return view('doctor.patients');
+    }
+
+    public function profile()
+    {
+        return view('doctor.profile');
+    }
 }
